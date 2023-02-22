@@ -62,3 +62,8 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
   })
   .then(response => response.json())
   .then(json => console.log(json));
+
+  // Deleting a resource
+  fetch('https://jsonplaceholder.typicode.com/posts/1', {
+    method: 'DELETE',
+  });
