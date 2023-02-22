@@ -67,3 +67,10 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
   fetch('https://jsonplaceholder.typicode.com/posts/1', {
     method: 'DELETE',
   });
+
+  // Filtering resources
+  // Basic filtering is used by using query parameters
+  // This will return all posts from the first user
+  fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+  .then(response => response.json())
+  .then(json => console.log(json));
