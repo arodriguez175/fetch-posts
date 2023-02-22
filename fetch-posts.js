@@ -74,3 +74,9 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
   fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
   .then(response => response.json())
   .then(json => console.log(json));
+
+  // Listing nested resources
+  // Equivalent to /comments?postId=1
+  fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
+  .then(response => response.json())
+  .then(json => console.log(json));
