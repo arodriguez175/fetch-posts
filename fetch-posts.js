@@ -48,3 +48,17 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
   })
   .then(response => response.json())
   .then(json => console.log(json));
+
+  // Patching a resource
+  // PATCH makes partial changes to a resource
+  fetch('https://jsonplaceholder.typicode.com/posts/1', {
+    method: 'PATCH',
+    body: JSON.stringify({
+      title: 'zyx',
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+  .then(response => response.json())
+  .then(json => console.log(json));
